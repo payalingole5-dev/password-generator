@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payal's Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Payal's Password Generator</h2>
+        
+        <div class="result-container">
+            <span id="password-display">P@ssw0rd123</span>
+            <button id="copy-btn">Copy</button>
+        </div>
+
+        <div class="settings">
+            <div class="setting">
+                <label>Password Length: <span id="length-val">16</span></label>
+                <input type="range" id="length-slider" min="4" max="32" value="16">
+            </div>
+            
+            <div class="setting">
+                <label><input type="checkbox" id="lowercase" checked> Lowercase (a-z)</label>
+            </div>
+            <div class="setting">
+                <label><input type="checkbox" id="uppercase" checked> Uppercase (A-Z)</label>
+            </div>
+            <div class="setting">
+                <label><input type="checkbox" id="numbers" checked> Numbers (0-9)</label>
+            </div>
+            <div class="setting">
+                <label><input type="checkbox" id="symbols" checked> Symbols (!@#$)</label>
+            </div>
+        </div>
+
+        <button class="generate-btn" id="generate-btn">Generate Password</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
