@@ -3,41 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payal's Password Generator</title>
+    <title>Password Generator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h2>Payal's Password Generator</h2>
+        <h2>Password Generator</h2>
         
         <div class="result-container">
-            <span id="password-display">P@ssw0rd123</span>
-            <button id="copy-btn">Copy</button>
+            <span id="passwordDisplay">P@ssword123</span>
+            <button id="copyBtn" onclick="copyPassword()">Copy</button>
         </div>
 
         <div class="settings">
             <div class="setting">
-                <label>Password Length: <span id="length-val">16</span></label>
-                <input type="range" id="length-slider" min="4" max="32" value="16">
+                <label>Password Length</label>
+                <input type="range" id="lengthSlider" min="4" max="32" value="12">
+                <span id="lengthValue">12</span>
             </div>
             
             <div class="setting">
-                <label><input type="checkbox" id="lowercase" checked> Lowercase (a-z)</label>
+                <label>Include Uppercase</label>
+                <input type="checkbox" id="uppercase" checked>
             </div>
+            
             <div class="setting">
-                <label><input type="checkbox" id="uppercase" checked> Uppercase (A-Z)</label>
+                <label>Include Lowercase</label>
+                <input type="checkbox" id="lowercase" checked>
             </div>
+            
             <div class="setting">
-                <label><input type="checkbox" id="numbers" checked> Numbers (0-9)</label>
+                <label>Include Numbers</label>
+                <input type="checkbox" id="numbers" checked>
             </div>
+            
             <div class="setting">
-                <label><input type="checkbox" id="symbols" checked> Symbols (!@#$)</label>
+                <label>Include Symbols</label>
+                <input type="checkbox" id="symbols">
             </div>
         </div>
 
-        <button class="generate-btn" id="generate-btn">Generate Password</button>
+        <button class="generate-btn" id="generateBtn">Generate Password</button>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
